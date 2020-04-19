@@ -1,0 +1,2 @@
+# AllStarDownloaderClient
+LoveliveAllstar卡面下载查询器客户端
