@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +17,11 @@ namespace AllStarDownloader_client
     public partial class Form1 : Form
     {
         static string constructorString = "server=siriusxiang.xyz;user id=guest;database=allstar;persistsecurityinfo=False;sslmode=None";
-        static string select_string = "select id,name,unit,subunit,rarity from card ";
+        static string select_string = "select id,name,unit,subunit,rarity,update_date from card ";
         MySqlConnection con = new MySqlConnection(constructorString);
         Filter f = new Filter(select_string);
+        DataSet ds = new DataSet();
+        preview_form pf = new preview_form();
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +29,27 @@ namespace AllStarDownloader_client
 
         private void dataGridViewX1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string col_name = dataGridViewX1.Columns[e.ColumnIndex].Name;
+            bool is_awaken = !col_name.Contains("normal");
+            if ((col_name != "view_normal_preview" && col_name != "view_awaken_preview") || e.RowIndex < 0 || e.RowIndex > ds.Tables[0].Rows.Count - 1)
+                return;
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter(new MySqlCommand("select " + (!is_awaken ? "preview_downloadlink" : "preview_downloadlink_awaken") + " from card where id = " + dataGridViewX1.Rows[e.RowIndex].Cells[0].Value + ";", con));
+                DataSet temp_ds = new DataSet();
+                sda.Fill(temp_ds, "temp_preview_link");
+                //System.Diagnostics.Debug.Write();
+                pf.url = temp_ds.Tables[0].Rows[0][0].ToString();
+                pf.picture_name = ds.Tables[0].Rows[e.RowIndex][0].ToString()+" "+ ds.Tables[0].Rows[e.RowIndex][1].ToString() + (is_awaken ? " awaken" : " normal");
+                pf.Text += pf.picture_name;
+                pf.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("错误：" + ex.Message, "请求预览失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,10 +71,12 @@ namespace AllStarDownloader_client
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter(new MySqlCommand(select_string, con));
-                DataSet ds = new DataSet();
+                ds = new DataSet();
+                dataGridViewX1.Columns.Clear();
                 sda.Fill(ds, "card");
                 dataGridViewX1.DataSource = ds.Tables[0];
-
+                dataGridViewX1.Columns.Add(new DataGridViewButtonColumn() { Name = "view_normal_preview", HeaderText = "View normal preview", Text = "View", UseColumnTextForButtonValue = true });
+                dataGridViewX1.Columns.Add(new DataGridViewButtonColumn() { Name = "view_awaken_preview", HeaderText = "View awaken preview", Text = "View", UseColumnTextForButtonValue = true });
             }
             catch (Exception ex)
             {
@@ -76,6 +103,20 @@ namespace AllStarDownloader_client
         private void dataGridViewX1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             MessageBox.Show(e.RowIndex.ToString());
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to exit?", "Exit confirm", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Dispose();
+                con.Close();
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

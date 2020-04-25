@@ -380,16 +380,16 @@
             this.aq_rubi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_rubi.Location = new System.Drawing.Point(260, 111);
             this.aq_rubi.Name = "aq_rubi";
-            this.aq_rubi.Size = new System.Drawing.Size(77, 31);
+            this.aq_rubi.Size = new System.Drawing.Size(83, 31);
             this.aq_rubi.TabIndex = 11;
-            this.aq_rubi.Text = "Rubi";
+            this.aq_rubi.Text = "Ruby";
             this.aq_rubi.UseVisualStyleBackColor = true;
             // 
             // aq_mari
             // 
             this.aq_mari.AutoSize = true;
             this.aq_mari.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.aq_mari.Location = new System.Drawing.Point(119, 111);
+            this.aq_mari.Location = new System.Drawing.Point(6, 111);
             this.aq_mari.Name = "aq_mari";
             this.aq_mari.Size = new System.Drawing.Size(78, 31);
             this.aq_mari.TabIndex = 10;
@@ -402,9 +402,9 @@
             this.aq_yoshiko.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_yoshiko.Location = new System.Drawing.Point(260, 74);
             this.aq_yoshiko.Name = "aq_yoshiko";
-            this.aq_yoshiko.Size = new System.Drawing.Size(105, 31);
+            this.aq_yoshiko.Size = new System.Drawing.Size(109, 31);
             this.aq_yoshiko.TabIndex = 9;
-            this.aq_yoshiko.Text = "Yohane";
+            this.aq_yoshiko.Text = "Yoshiko";
             this.aq_yoshiko.UseVisualStyleBackColor = true;
             // 
             // aq_you
@@ -422,11 +422,11 @@
             // 
             this.aq_maru.AutoSize = true;
             this.aq_maru.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.aq_maru.Location = new System.Drawing.Point(6, 111);
+            this.aq_maru.Location = new System.Drawing.Point(119, 111);
             this.aq_maru.Name = "aq_maru";
-            this.aq_maru.Size = new System.Drawing.Size(85, 31);
+            this.aq_maru.Size = new System.Drawing.Size(133, 31);
             this.aq_maru.TabIndex = 7;
-            this.aq_maru.Text = "Maru";
+            this.aq_maru.Text = "Hanamaru";
             this.aq_maru.UseVisualStyleBackColor = true;
             // 
             // aq_dia
