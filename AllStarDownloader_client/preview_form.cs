@@ -21,44 +21,17 @@ namespace AllStarDownloader_client
         public string url { get; set; }
         public string picture_name { get; set; }
         string previous_url;
+        public string original_url { get; set; }
         public preview_form()
         {
             InitializeComponent();
-        }
-        public static byte[] bytes_image_adapter(Bitmap b)
-        {
-            MemoryStream ms = new MemoryStream();
-            b.Save(ms, ImageFormat.Bmp);
-            byte[] bytes = ms.GetBuffer();
-            return bytes;
-        }
-
-        public static Bitmap bytes_image_adapter(byte[] b)
-        {
-            using (MemoryStream ms = new MemoryStream(b))
-            {
-                Bitmap outputImg = new Bitmap(Image.FromStream(ms));
-                return outputImg;
-            }
-        }
-
-        public static byte[] GetBytes(string url)
-        {
-            try
-            {
-                return client.DownloadData(url);
-            }
-            catch
-            {
-                Console.WriteLine("Ignore " + url.Substring(url.LastIndexOf("/") + 1));
-            }
-            return null;
         }
 
         private delegate void set_image_delegate(Bitmap b);
         private void preview_form_Load(object sender, EventArgs e)
         {
             save_button.Enabled = false;
+            save_origin.Enabled = false;
             if(previous_url != url)
             {
                 bitmap = null;
@@ -72,7 +45,7 @@ namespace AllStarDownloader_client
 
         private void get_image()
         {
-            bitmap = bytes_image_adapter(GetBytes(url));
+            bitmap = Common.bytes_image_adapter(Common.GetBytes(url,client));
             set_image(bitmap);
         }
 
@@ -87,6 +60,7 @@ namespace AllStarDownloader_client
             {
                 pictureBox1.Image = b;
                 save_button.Enabled = true;
+                save_origin.Enabled = true;
                 Refresh();
             }
         }
@@ -109,6 +83,26 @@ namespace AllStarDownloader_client
         {
             Text = "Preview ";
             Close();
+        }
+
+        private void save_origin_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sf1 = new SaveFileDialog() { Title = "Save original picture", Filter = "JPEG|*.jpg|PNG|*.png", FileName = picture_name + " original" };
+            string path = "";
+            if (sf1.ShowDialog() == DialogResult.OK)
+            {
+                path = sf1.FileName;
+            }
+            DownloadOriginalImage d = new DownloadOriginalImage(original_url, path);
+            DialogResult result = d.ShowDialog();
+            if (result == DialogResult.OK || result == DialogResult.Abort)
+            {
+                d.Dispose();
+                //if (result == DialogResult.Abort)
+                //{
+                //    File.Delete(path);
+                //}
+            }
         }
     }
 }

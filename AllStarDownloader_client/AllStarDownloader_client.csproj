@@ -69,6 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="DownloadOriginalImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadOriginalImage.Designer.cs">
+      <DependentUpon>DownloadOriginalImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Filter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DownloadOriginalImage.resx">
+      <DependentUpon>DownloadOriginalImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>

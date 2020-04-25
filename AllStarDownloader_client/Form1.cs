@@ -35,13 +35,14 @@ namespace AllStarDownloader_client
                 return;
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter(new MySqlCommand("select " + (!is_awaken ? "preview_downloadlink" : "preview_downloadlink_awaken") + " from card where id = " + dataGridViewX1.Rows[e.RowIndex].Cells[0].Value + ";", con));
+                MySqlDataAdapter sda = new MySqlDataAdapter(new MySqlCommand("select " + (!is_awaken ? "preview_downloadlink,downloadlink" : "preview_downloadlink_awaken,downloadlink_awaken") + " from card where id = " + dataGridViewX1.Rows[e.RowIndex].Cells[0].Value + ";", con));
                 DataSet temp_ds = new DataSet();
                 sda.Fill(temp_ds, "temp_preview_link");
                 //System.Diagnostics.Debug.Write();
                 pf.url = temp_ds.Tables[0].Rows[0][0].ToString();
                 pf.picture_name = ds.Tables[0].Rows[e.RowIndex][0].ToString()+" "+ ds.Tables[0].Rows[e.RowIndex][1].ToString() + (is_awaken ? " awaken" : " normal");
                 pf.Text += pf.picture_name;
+                pf.original_url = temp_ds.Tables[0].Rows[0][1].ToString();
                 pf.ShowDialog();
             }
             catch (Exception ex)
