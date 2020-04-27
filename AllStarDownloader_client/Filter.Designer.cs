@@ -90,19 +90,25 @@
             this.group_grade1 = new System.Windows.Forms.RadioButton();
             this.group_none = new System.Windows.Forms.RadioButton();
             this.group_all = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.range_to = new System.Windows.Forms.TextBox();
+            this.range_from = new System.Windows.Forms.TextBox();
             this.rarity.SuspendLayout();
             this.muse.SuspendLayout();
             this.aqours.SuspendLayout();
             this.Nijigasaki.SuspendLayout();
             this.Group_filt.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(554, 62);
+            this.button1.Location = new System.Drawing.Point(742, 62);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 77);
+            this.button1.Size = new System.Drawing.Size(141, 77);
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -222,6 +228,8 @@
             // muse_nico
             // 
             this.muse_nico.AutoSize = true;
+            this.muse_nico.Checked = true;
+            this.muse_nico.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_nico.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_nico.Location = new System.Drawing.Point(261, 98);
             this.muse_nico.Name = "muse_nico";
@@ -233,6 +241,8 @@
             // muse_hanayo
             // 
             this.muse_hanayo.AutoSize = true;
+            this.muse_hanayo.Checked = true;
+            this.muse_hanayo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_hanayo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_hanayo.Location = new System.Drawing.Point(121, 98);
             this.muse_hanayo.Name = "muse_hanayo";
@@ -244,6 +254,8 @@
             // muse_maki
             // 
             this.muse_maki.AutoSize = true;
+            this.muse_maki.Checked = true;
+            this.muse_maki.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_maki.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_maki.Location = new System.Drawing.Point(261, 61);
             this.muse_maki.Name = "muse_maki";
@@ -255,6 +267,8 @@
             // muse_rin
             // 
             this.muse_rin.AutoSize = true;
+            this.muse_rin.Checked = true;
+            this.muse_rin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_rin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_rin.Location = new System.Drawing.Point(121, 61);
             this.muse_rin.Name = "muse_rin";
@@ -266,6 +280,8 @@
             // muse_nozomi
             // 
             this.muse_nozomi.AutoSize = true;
+            this.muse_nozomi.Checked = true;
+            this.muse_nozomi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_nozomi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_nozomi.Location = new System.Drawing.Point(6, 98);
             this.muse_nozomi.Name = "muse_nozomi";
@@ -277,6 +293,8 @@
             // muse_umi
             // 
             this.muse_umi.AutoSize = true;
+            this.muse_umi.Checked = true;
+            this.muse_umi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_umi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_umi.Location = new System.Drawing.Point(6, 61);
             this.muse_umi.Name = "muse_umi";
@@ -322,6 +340,8 @@
             // muse_kotori
             // 
             this.muse_kotori.AutoSize = true;
+            this.muse_kotori.Checked = true;
+            this.muse_kotori.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_kotori.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_kotori.Location = new System.Drawing.Point(261, 24);
             this.muse_kotori.Name = "muse_kotori";
@@ -333,6 +353,8 @@
             // muse_eli
             // 
             this.muse_eli.AutoSize = true;
+            this.muse_eli.Checked = true;
+            this.muse_eli.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_eli.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_eli.Location = new System.Drawing.Point(121, 24);
             this.muse_eli.Name = "muse_eli";
@@ -344,6 +366,8 @@
             // muse_honoka
             // 
             this.muse_honoka.AutoSize = true;
+            this.muse_honoka.Checked = true;
+            this.muse_honoka.CheckState = System.Windows.Forms.CheckState.Checked;
             this.muse_honoka.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.muse_honoka.Location = new System.Drawing.Point(6, 24);
             this.muse_honoka.Name = "muse_honoka";
@@ -377,6 +401,8 @@
             // aq_rubi
             // 
             this.aq_rubi.AutoSize = true;
+            this.aq_rubi.Checked = true;
+            this.aq_rubi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_rubi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_rubi.Location = new System.Drawing.Point(260, 111);
             this.aq_rubi.Name = "aq_rubi";
@@ -388,6 +414,8 @@
             // aq_mari
             // 
             this.aq_mari.AutoSize = true;
+            this.aq_mari.Checked = true;
+            this.aq_mari.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_mari.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_mari.Location = new System.Drawing.Point(6, 111);
             this.aq_mari.Name = "aq_mari";
@@ -399,6 +427,8 @@
             // aq_yoshiko
             // 
             this.aq_yoshiko.AutoSize = true;
+            this.aq_yoshiko.Checked = true;
+            this.aq_yoshiko.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_yoshiko.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_yoshiko.Location = new System.Drawing.Point(260, 74);
             this.aq_yoshiko.Name = "aq_yoshiko";
@@ -410,6 +440,8 @@
             // aq_you
             // 
             this.aq_you.AutoSize = true;
+            this.aq_you.Checked = true;
+            this.aq_you.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_you.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_you.Location = new System.Drawing.Point(119, 74);
             this.aq_you.Name = "aq_you";
@@ -421,6 +453,8 @@
             // aq_maru
             // 
             this.aq_maru.AutoSize = true;
+            this.aq_maru.Checked = true;
+            this.aq_maru.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_maru.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_maru.Location = new System.Drawing.Point(119, 111);
             this.aq_maru.Name = "aq_maru";
@@ -432,6 +466,8 @@
             // aq_dia
             // 
             this.aq_dia.AutoSize = true;
+            this.aq_dia.Checked = true;
+            this.aq_dia.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_dia.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_dia.Location = new System.Drawing.Point(6, 74);
             this.aq_dia.Name = "aq_dia";
@@ -477,6 +513,8 @@
             // aq_kanan
             // 
             this.aq_kanan.AutoSize = true;
+            this.aq_kanan.Checked = true;
+            this.aq_kanan.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_kanan.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_kanan.Location = new System.Drawing.Point(260, 37);
             this.aq_kanan.Name = "aq_kanan";
@@ -488,6 +526,8 @@
             // aq_riko
             // 
             this.aq_riko.AutoSize = true;
+            this.aq_riko.Checked = true;
+            this.aq_riko.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_riko.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_riko.Location = new System.Drawing.Point(119, 37);
             this.aq_riko.Name = "aq_riko";
@@ -499,6 +539,8 @@
             // aq_chika
             // 
             this.aq_chika.AutoSize = true;
+            this.aq_chika.Checked = true;
+            this.aq_chika.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aq_chika.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.aq_chika.Location = new System.Drawing.Point(6, 37);
             this.aq_chika.Name = "aq_chika";
@@ -532,6 +574,8 @@
             // niji_
             // 
             this.niji_.AutoSize = true;
+            this.niji_.Checked = true;
+            this.niji_.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_.Location = new System.Drawing.Point(260, 111);
             this.niji_.Name = "niji_";
@@ -543,6 +587,8 @@
             // niji_ema
             // 
             this.niji_ema.AutoSize = true;
+            this.niji_ema.Checked = true;
+            this.niji_ema.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_ema.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_ema.Location = new System.Drawing.Point(119, 111);
             this.niji_ema.Name = "niji_ema";
@@ -554,6 +600,8 @@
             // niji_kanata
             // 
             this.niji_kanata.AutoSize = true;
+            this.niji_kanata.Checked = true;
+            this.niji_kanata.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_kanata.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_kanata.Location = new System.Drawing.Point(260, 74);
             this.niji_kanata.Name = "niji_kanata";
@@ -565,6 +613,8 @@
             // niji_ai
             // 
             this.niji_ai.AutoSize = true;
+            this.niji_ai.Checked = true;
+            this.niji_ai.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_ai.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_ai.Location = new System.Drawing.Point(119, 74);
             this.niji_ai.Name = "niji_ai";
@@ -576,6 +626,8 @@
             // naji_setsuna
             // 
             this.naji_setsuna.AutoSize = true;
+            this.naji_setsuna.Checked = true;
+            this.naji_setsuna.CheckState = System.Windows.Forms.CheckState.Checked;
             this.naji_setsuna.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.naji_setsuna.Location = new System.Drawing.Point(6, 111);
             this.naji_setsuna.Name = "naji_setsuna";
@@ -587,6 +639,8 @@
             // niji_karin
             // 
             this.niji_karin.AutoSize = true;
+            this.niji_karin.Checked = true;
+            this.niji_karin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_karin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_karin.Location = new System.Drawing.Point(6, 74);
             this.niji_karin.Name = "niji_karin";
@@ -632,6 +686,8 @@
             // niji_shizuku
             // 
             this.niji_shizuku.AutoSize = true;
+            this.niji_shizuku.Checked = true;
+            this.niji_shizuku.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_shizuku.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_shizuku.Location = new System.Drawing.Point(260, 37);
             this.niji_shizuku.Name = "niji_shizuku";
@@ -643,6 +699,8 @@
             // niji_kasumi
             // 
             this.niji_kasumi.AutoSize = true;
+            this.niji_kasumi.Checked = true;
+            this.niji_kasumi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_kasumi.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_kasumi.Location = new System.Drawing.Point(119, 37);
             this.niji_kasumi.Name = "niji_kasumi";
@@ -654,6 +712,8 @@
             // niji_ayumu
             // 
             this.niji_ayumu.AutoSize = true;
+            this.niji_ayumu.Checked = true;
+            this.niji_ayumu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.niji_ayumu.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_ayumu.Location = new System.Drawing.Point(6, 37);
             this.niji_ayumu.Name = "niji_ayumu";
@@ -828,11 +888,62 @@
             this.group_all.Text = "All";
             this.group_all.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.range_to);
+            this.groupBox1.Controls.Add(this.range_from);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(485, 38);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 123);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ID range";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "to";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "From";
+            // 
+            // range_to
+            // 
+            this.range_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.range_to.Location = new System.Drawing.Point(105, 78);
+            this.range_to.Name = "range_to";
+            this.range_to.Size = new System.Drawing.Size(81, 34);
+            this.range_to.TabIndex = 1;
+            this.range_to.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.range_to_KeyPress);
+            // 
+            // range_from
+            // 
+            this.range_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.range_from.Location = new System.Drawing.Point(105, 30);
+            this.range_from.Name = "range_from";
+            this.range_from.Size = new System.Drawing.Size(81, 34);
+            this.range_from.TabIndex = 0;
+            this.range_from.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.range_from_KeyPress);
+            // 
             // Filter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 712);
+            this.ClientSize = new System.Drawing.Size(925, 675);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Group_filt);
             this.Controls.Add(this.Nijigasaki);
             this.Controls.Add(this.aqours);
@@ -854,6 +965,8 @@
             this.Nijigasaki.PerformLayout();
             this.Group_filt.ResumeLayout(false);
             this.Group_filt.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -922,5 +1035,10 @@
         private System.Windows.Forms.RadioButton group_grade2;
         private System.Windows.Forms.RadioButton group_grade1;
         private System.Windows.Forms.RadioButton group_none;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox range_to;
+        private System.Windows.Forms.TextBox range_from;
     }
 }

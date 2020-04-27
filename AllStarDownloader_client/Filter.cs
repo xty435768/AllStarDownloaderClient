@@ -27,6 +27,8 @@ namespace AllStarDownloader_client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int from = range_from.Text.Length == 0 ? 0 : Convert.ToInt32(range_from.Text);
+            int to = range_to.Text.Length == 0 ? int.MaxValue : Convert.ToInt32(range_to.Text);
             string c = sqlcommand_head + "where ";
             c += "(" + (rarity_r.Checked ? "rarity='Rare' or " : "") +
                  (rarity_sr.Checked ? "rarity='Super rare' or " : "") +
@@ -54,7 +56,13 @@ namespace AllStarDownloader_client
                     break; 
                 }
             }
-            c += ";";
+            if(from > to)
+            {
+                MessageBox.Show("Range is invalid! Please check again.", "Invalid range", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            c += " and id <= " + to + " and id >= " + from + ";";
+            System.Diagnostics.Debug.Write(c + "\n");
             R_command(c);
             Hide();
         }
@@ -75,7 +83,6 @@ namespace AllStarDownloader_client
                 if (item is CheckBox) item.Checked = false;
                 else continue;
             }
-
         }
 
         private void rarity_reverse_Click(object sender, EventArgs e)
@@ -178,6 +185,22 @@ namespace AllStarDownloader_client
                 if (item.Checked) return item.Text;
             }
             return "null";
+        }
+
+        private void range_from_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar) || e.KeyChar == '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void range_to_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar) || e.KeyChar == '\b'))
+            {
+                e.Handled = true;
+            }
         }
     }
 
