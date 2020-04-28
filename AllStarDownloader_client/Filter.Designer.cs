@@ -592,9 +592,9 @@
             this.niji_ema.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.niji_ema.Location = new System.Drawing.Point(119, 111);
             this.niji_ema.Name = "niji_ema";
-            this.niji_ema.Size = new System.Drawing.Size(75, 31);
+            this.niji_ema.Size = new System.Drawing.Size(91, 31);
             this.niji_ema.TabIndex = 10;
-            this.niji_ema.Text = "Ema";
+            this.niji_ema.Text = "Verde";
             this.niji_ema.UseVisualStyleBackColor = true;
             // 
             // niji_kanata
